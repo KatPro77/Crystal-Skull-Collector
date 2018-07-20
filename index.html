@@ -8,8 +8,81 @@
 </head>
 <body>
     
+<!-- Premise - use JQuery to update "html"
+
+in HTML create IDs for:
+      winCounts
+      lossCounts
+      scoreSpace
+
+in HTML link 
+        reset sheet
+        css sheet
+        script????
+        google fonts
+        jquery / bootstrap???
+
+1) $(document).ready(function)
+
+2) create variables & set to 0 for:
+    score/user total
+    wins
+    loss
+    random number
+    4x crystals??? (sub id instead?)
+
+3) display wins/losses and total score
+        - CREATE FUNCTION / use IDs for HTML  - (get ElementByID????)
+
+4) display random number
+        - CREATE FUNCTION 
+
+5) CREATE FUNCTION for reset the game
+        function reset()
+
+6) assign numbers to each crystals (1-12)
+
+7) create IF and ELSE statements:
+
+        if Wins (total score) = random number
+            (create  winning alert)
+
+        if Loss > random number
+            (create decorative loss alert) - GAME OVER
+
+      use RESET funvtion
+
+REPEAT THIS FO ALL THE GEMS!! / or use # for all of them?? - check the hangman game
+
+8) create on key/click event 
+
+-->
 
 
-    
+     -->
+
+
 </body>
-</html>
+</html> 
+
+
+<!-- 
+    //1) how to create a button with jquery??
+    - create buttons with assigned values (1-12)
+   2) create win/loss count
+   3) create random number generator (19-120)
+
+???? MAYBE function makeid() {
+  var text = "";
+  var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 5; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
+}
+
+console.log(makeid());
+
+
+  
