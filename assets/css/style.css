@@ -4,25 +4,72 @@ body {
         
 }
 
+#targetNumber {
+    float: left;
+    color: rgb(161, 9, 9);
+}
+
+#random {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#randomNumber {
+    font-size: 80px;
+    text-shadow: 2px 2px black;
+}
+
+#totalPoints {
+    float: left;
+    color: rgb(161, 9, 9);
+}
+
+#score {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#totalNumber {
+    font-size: 80px;
+    text-shadow: 2px 2px black;
+}
+
+/* //wins and loss score board */
+.card-body {
+    float: right;
+    margin-right: 350px;
+    color:  rgb(16, 100, 139);
+    font-size: 40px;
+    text-shadow: 2px 2px black;
+}
+
+#wins, #loss {
+    font-weight: bold;
+}
+
+
 /* //crystals and text styling */
 #skullRow {
     padding: 10px 0px 0px 250px;
-    width: 85%;
+    width: 120%;
 }
 
 #red {
     border: 1px;
     border-radius: 50%;
+    margin-right: 8px;
 }
 
 #blue {
     border: 1px;
     border-radius: 50%;
+    margin-right: 8px;
 }
 
 #yellow {
     border: 1px;
     border-radius: 50%;
+    margin-right: 8px;
 }
 
 #green {
@@ -42,5 +89,5 @@ h2 {
 
 p {
     color: white;
-    font-size: 30px;
+    font-size: 40px;
 }
