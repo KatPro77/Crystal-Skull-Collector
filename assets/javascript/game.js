@@ -30,6 +30,7 @@ $(document).ready(function () {
 
     //Start the game
     function gameStart() {
+        random = Math.floor(Math.random() * 102) + 19;
         $("#randomNumber").text(random);
         red = Math.floor(Math.random()*12) + 1;
         blue = Math.floor(Math.random()*12) + 1;
@@ -37,8 +38,7 @@ $(document).ready(function () {
         green = Math.floor(Math.random()*12) + 1;
         playerScore = 0;
         $("totalNumber").text(playerScore);
-        
-        
+    
     }
 
      // Display wins
@@ -46,14 +46,14 @@ $(document).ready(function () {
         alert("YOU WIN!");
         wins++; 
         $("#wins").text(wins);
-        // gameStart();
+        gameStart();
     }
     // Display losses
     function gameOver(){
         alert ("GAME OVER! Try again!");
         loss++;
         $("#loss").text(loss);
-        // gameStart();
+        gameStart();
     }
 
    
