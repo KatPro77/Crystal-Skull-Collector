@@ -2,50 +2,208 @@ $(document).ready(function () {
 
 
     // create variables & set to 0
-    var score = 0;      //user;s score
-    var random = 0;     //number to match
+    
+      
+   
     var wins = 0;
     var loss = 0;
-    
-    // $("#wins").text(wins);
-    // $("#loss").text(losses);
-    var skullValue = ["assets/images/Red skull.png", "assets/images/blue skull.png", "assets/images/yellow skull.png", "assets/images/green skull.png"];
+    $("#wins").text("Wins" + wins);
+    $("#loss").text("Lossess" + loss);
 
-    // var red = 0;
-    // var blue = 0;
-    // var yellow = 0;
-    // var green = 0;
-    
-    // create random numbers for each skull (1-12) and random number to match
-    
-    function selectNumbers () {
-   
-    red = Math.floor(Math.random()*13);
-    blue = Math.floor(Math.random()*13);
-    yellow = Math.floor(Math.random()*13);
-    blue = Math.floor(Math.random()*13);
 
-    // create the random target number, 19 - 120
-	random = Math.floor(Math.random() * 102) + 19;
-        $("#targetNumber").html(random);
-        
-        console.log("targetNumber" + random);
+    // create the random number to match, 19 - 120
+    random = Math.floor(Math.random() * 102) + 19;
+
+    console.log("#random" + random);
+
+
+//     function gameStart () {
+//     alert("Let's Play!");
+// }
+
+//     gameStart();
+
+    function newNumbers() {
+        $("#randomNumber").html("random");
+        return false;
+    }
+
+    newNumbers();
+
+    // random numbers for each skull (1-12) 
+    var red = Math.floor(Math.random()*12) + 1;
+    var blue = Math.floor(Math.random()*12) + 1;
+    var yellow = Math.floor(Math.random()*12) + 1;
+    var green = Math.floor(Math.random()*12) + 1;
     
-
-    score = 0;
-        $("#totalPoints").text(score);
-
     console.log(red);
     console.log(blue);
     console.log(yellow);
     console.log(green);
     console.log(random);
 
-};
-    selectNumbers();
+
+    var score = 0;
+
+    $("#red").on("click", function() {
+        score = score + parseInt(red);
+        $("#totalNumber").text(score);
+
+
+        if (score === random) {
+            wins++;
+            $("#wins").text("wins  " + win);
+            alert("YOU WIN!!!");
+
+            score = 0;
+            $("#totalNumber").text(score);
+            var randomNumber = Math.floor(Math.random() * 102) + 19;
+            $("randomNumber").html(randomNumber);
+
+        } else if (score > random) {
+
+            loss++;
+            $("#loss").text("loss  " + loss);
+            alert("GAME OVER!!!")
+
+            score = 0;
+            $("#totalNumber").text(score);
+            var randomNumber = Math.floor(Math.random() * 102) + 19;
+            $("randomNumber").html(randomNumber);
+        }
+
+
+
+    });
+
+    $("#blue").on("click", function() {
+        score = score + parseInt(blue);
+        $("#totalNumber").text(score);
+
+
+        if (score === random) {
+            wins++;
+            $("#wins").text("wins  " + win);
+            alert("YOU WIN!!!");
+
+            score = 0;
+            $("#totalNumber").text(score);
+            var randomNumber = Math.floor(Math.random() * 102) + 19;
+            $("randomNumber").html(randomNumber);
+
+        } else if (score > random) {
+
+            loss++;
+            $("#loss").text("loss  " + loss);
+            alert("GAME OVER!!!")
+
+            score = 0;
+            $("#totalNumber").text(score);
+            var randomNumber = Math.floor(Math.random() * 102) + 19;
+            $("randomNumber").html(randomNumber);
+        }
+
+
+
+    });
+
+    $("#yellow").on("click", function() {
+        score = score + parseInt(yellow);
+        $("#totalNumber").text(score);
+
+
+        if (score === random) {
+            wins++;
+            $("#wins").text("wins  " + win);
+            alert("YOU WIN!!!");
+
+            score = 0;
+            $("#totalNumber").text(score);
+            var randomNumber = Math.floor(Math.random() * 102) + 19;
+            $("randomNumber").html(randomNumber);
+
+        } else if (score > random) {
+
+            loss++;
+            $("#loss").text("loss  " + loss);
+            alert("GAME OVER!!!")
+
+            score = 0;
+            $("#totalNumber").text(score);
+            var randomNumber = Math.floor(Math.random() * 102) + 19;
+            $("randomNumber").html(randomNumber);
+        }
+
+
+
+    });
+
+    $("#green").on("click", function() {
+        score = score + parseInt(green);
+        $("#totalNumber").text(score);
+
+
+        if (score === random) {
+            wins++;
+            $("#wins").text("wins  " + win);
+            alert("YOU WIN!!!");
+
+            score = 0;
+            $("#totalNumber").text(score);
+            var randomNumber = Math.floor(Math.random() * 102) + 19;
+            $("randomNumber").html(randomNumber);
+
+        } else if (score > random) {
+
+            loss++;
+            $("#loss").text("loss  " + loss);
+            alert("GAME OVER!!!")
+
+            score = 0;
+            $("#totalNumber").text(score);
+            var randomNumber = Math.floor(Math.random() * 102) + 19;
+            $("randomNumber").html(randomNumber);
+        }
+
+
+
+    });
+
 
 });
 
+
+//     newGame();
+    
+//         function newNumbers() {
+//             var skulls = [];
+//                 skulls = Math.floor(Math.random()*13);
+    
+
+           
+           
+           
+           
+//             $("#targetNumber").html("Number To Match" + random.toString());
+        
+//             var found = false;
+//                 for (var i=0; i< skulls.length; i++){
+                    
+//                     if (skulls[i] == random){
+//                     found = true; break
+//           }
+        
+        
+//         if(!found)skulls[skullValue.length]=random;
+//       }
+
+//     score = 0;
+//         $("#totalPoints").text(score);
+
+   
+
+// };
+//     newtNumbers();
 // 2) 
 
 // 3) display wins/losses and total score
