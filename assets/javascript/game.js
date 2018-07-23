@@ -37,7 +37,7 @@ $(document).ready(function () {
         yellow = Math.floor(Math.random()*12) + 1;
         green = Math.floor(Math.random()*12) + 1;
         playerScore = 0;
-        $("totalNumber").text(playerScore);
+        $("#totalNumber").text(playerScore);
     
     }
 
